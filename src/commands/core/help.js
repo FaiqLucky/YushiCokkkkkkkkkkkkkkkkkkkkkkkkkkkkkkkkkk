@@ -10,7 +10,7 @@ exports.run = async (client, message, args, color) => {
     .setColor(color)
       .setThumbnail(client.user.displayAvatarURL) 
     .setAuthor(client.user.username + ' Help')
-    .setFooter(`To check the command usage, type ${prefix}help <commands> // Total: ${client.commands.size}`)
+    .setFooter(`To check the command usage, type ${prefix}help <commands> // Total Command: ${client.commands.size}`)
     for (const mod of module) {
       embed.addField(`${mod.name}`, mod.cmds.map(x => `\`${x}\``).join(', '));
     }
