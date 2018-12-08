@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const moment = require('moment');
 
 exports.run = async (client, message, args) => {
   
@@ -7,8 +8,10 @@ exports.run = async (client, message, args) => {
   .setColor("RED")
   .setAuthor(`${client.user.tag} Status`)
   .setThumbnail(`${client.user.displayAvatarURL}`)
+  .addField("Creator:", `<@242969117479403520>`, true)
   .addField("ID:", `\`${client.user.id}\``, true)
   .addField("General Information:", `Uptime: ${uptime}\nShard: ${client.shard.count}/1\nWS Ping: ${client.ping.toFixed(2)}ms`, true)
+  .addField("Create add:", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
   message.channel.send(stats)
 }
 
