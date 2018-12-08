@@ -16,7 +16,7 @@ exports.run = async (client, message, args) => {
   .addField("Create add:", `${moment.utc(client.user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
   .addField("Connected to:", `${client.guilds.size} Guilds\n${client.users.size} Users\n${client.channels.size} Channels`,true)
   .addField("System Status:", `Memor Usage : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB\nDiscord.js : v${version}\nNode : ${process.version}`, true)
-   .addField('📌 About me', '**Yushi Nishimaro bot created in Indonesian , High Quality Bot, Online in 24/7, Support command : Moderation, Music etc.**')
+   .addField('About me', '**Yushi Nishimaro bot created in Indonesian , High Quality Bot, Online in 24/7, Support command : Moderation, Music etc.**')
   message.channel.send(stats)
 }
 
