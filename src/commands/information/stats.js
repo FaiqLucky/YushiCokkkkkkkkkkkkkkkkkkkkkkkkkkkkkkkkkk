@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
   .addField("ID:", `\`${client.user.id}\``, true)
   .addField("General Information:", `Uptime: ${uptime}\nShard: ${client.shard.count}/1\nWS Ping: ${client.ping.toFixed(2)}ms`, true)
   .addField("Create add:", `${moment.utc(client.user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
-  .addField("Connected to:", `${client.guilds.size}guilds`,true)
+  .addField("Connected to:", `${client.guilds.size} Guilds\n${client.users.size} Users\n${client.channels.size} Channels`,true)
   message.channel.send(stats)
 }
 
