@@ -10,7 +10,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "canvas": "^2.1.0",
+    "canvas": "^2.2.0",
     "canvas-constructor": "^2.0.1",
     "cheerio": "^0.22.0",
     "dblapi.js": "^2.3.0",
@@ -32,7 +32,7 @@
     "superagent": "^4.0.0",
     "ytdl-core": "^0.28.0",
     "pino": "^5.9.0",
-    "pino-pretty": "^2.3.0",
+    "pino-pretty": "^2.4.0",
     "humanize-duration": "^3.16.0",
     "array-sort": "^1.0.0",
     "table": "^5.1.1",
@@ -40,7 +40,7 @@
     "figlet": "^1.2.1",
     "random-puppy": "^1.1.0",
     "cpu-stat": "^2.0.1",
-    "mathjs": "^5.3.0",
+    "mathjs": "^5.3.1",
     "mal-scraper": "^2.4.4",
     "string-similarity": "^3.0.0",
     "fortnite": "^4.1.1",
