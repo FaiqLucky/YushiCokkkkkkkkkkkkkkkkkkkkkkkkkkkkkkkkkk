@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
   .addField("General Information:", `Uptime: ${uptime}\nShard: ${client.shard.count}/1\nWS Ping: ${client.ping.toFixed(2)}ms`, true)
   .addField("Create add:", `${moment.utc(client.user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
   .addField("Connected to:", `${client.guilds.size} Guilds\n${client.users.size} Users\n${client.channels.size} Channels`,true)
-  .addField("System Status:", `Memor Usage : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB\nDiscord.js : v${version}\nNode : ${process.version}`)
+  .addField("System Status:", `Memor Usage : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB\nDiscord.js : v${version}\nNode : ${process.version}`, true)
   message.channel.send(stats)
 }
 
