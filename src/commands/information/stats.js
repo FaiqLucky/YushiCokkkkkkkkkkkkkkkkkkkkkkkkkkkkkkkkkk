@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
   .setAuthor(`${client.user.tag} Status`)
   .setThumbnail(`${client.user.displayAvatarURL}`)
   .addField("ID:", `\`${client.user.id}\``)
-  .addField("General Information:", `Uptime: ${uptime}\nShard: ${client.shard.count}/1`)
+  .addField("General Information:", `Uptime: ${uptime}\nShard: ${client.shard.count}/1\nWS Ping: ${client.ping.toFixed(2)}ms`, true)
   message.channel.send(stats)
 }
 
