@@ -27,8 +27,8 @@ exports.run = async (client, message, args, color) => {
       let embed = new RichEmbed()
         .setThumbnail(client.user.displayAvatarURL) 
       .setAuthor(client.user.tag + ' Help Description')
-      .setTitle(aliases[0] ? `${name} ֍֎► ${prefix}${aliases.join(` ֍֎► ${prefix}`)}` : `${name}`)
-      .setDescription(desc)
+      .setTitle(aliases[0] ? `Aliases : ${name} ֍֎► ${prefix}${aliases.join(` ֍֎► ${prefix}`)}` : `${name}`)
+      .setDescription("Desription",`${desc}`)
       .setColor(color)
       .addField('Usage', usage)
       return message.channel.send(embed);
