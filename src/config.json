@@ -1,0 +1,15 @@
+{
+  
+"red": "#b70000",
+  "orange": "#ff6a00",
+  "green": "#00ff26",
+  "purple": "#d604cf",
+  "version": "2.5.9",
+	"prefix": "-",
+	"token": "BOT_TOKEN",
+  "bot_prefix": "yu!",
+  "embed_color": "RANDOM",
+  "owners_id": [
+    "242969117479403520"
+  ]
+}
