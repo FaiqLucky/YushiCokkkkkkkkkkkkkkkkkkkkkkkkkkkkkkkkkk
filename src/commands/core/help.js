@@ -28,7 +28,7 @@ exports.run = async (client, message, args, color) => {
         .setThumbnail(client.user.displayAvatarURL) 
       .setAuthor(client.user.tag + ' Help Description')
       .setTitle(aliases[0] ?  `${name} ֍֎► ${prefix}${aliases.join(` ֍֎► ${prefix}`)}` : `${name}`)
-      .setDescription('Desription:', `${desc}`)
+      .setDescription(desc)
       .setColor(color)
       .addField('Usage:', usage)
       return message.channel.send(embed);
