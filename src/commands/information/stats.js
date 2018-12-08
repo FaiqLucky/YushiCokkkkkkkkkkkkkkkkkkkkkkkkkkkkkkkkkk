@@ -7,8 +7,8 @@ exports.run = async (client, message, args) => {
   .setColor("RED")
   .setAuthor(`${client.user.tag} Status`)
   .setThumbnail(`${client.user.displayAvatarURL}`)
-  .addField("ID:" `${client.user.id}`)
-  .addField("Uptime:" `${uptime}`)
+  .addField("ID:", `\`${client.user.id}\``)
+  .addField("General Information:", `Uptime: ${uptime}\nShard: ${client.shard.count}/1`)
   message.channel.send(stats)
 }
 
