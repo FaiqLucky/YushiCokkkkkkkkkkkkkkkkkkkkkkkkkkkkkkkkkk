@@ -14,7 +14,7 @@ this.run = async (client, message, args, color) => {
     let possibleinvites = [];
     let index = 0;
     invites.forEach(function(invites) {
-        possibleinvites.push(`**${++index}**. » **${invites.inviter.tag}** 》 \`${invites.uses}\` **invites**`)
+        possibleinvites.push(`**${++index}**. 🔰 **${invites.inviter.tag}** 》 \`${invites.uses}\` **invites**`)
     })
 
     const embed = new Discord.RichEmbed()
