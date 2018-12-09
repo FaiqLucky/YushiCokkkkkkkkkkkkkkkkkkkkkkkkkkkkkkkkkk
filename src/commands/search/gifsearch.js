@@ -17,7 +17,7 @@ exports.run = (bot, message, args) => {
     });
 
 exports.conf = {
-    aliases: [],
+    aliases: ["gs"],
     cooldown: 10
 }
 
