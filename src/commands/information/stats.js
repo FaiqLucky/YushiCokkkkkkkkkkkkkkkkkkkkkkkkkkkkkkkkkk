@@ -6,11 +6,11 @@ const os = require("os");
 const cpuStat = require("cpu-stat");
 
 exports.run = async (client, message, args) => {
-      let cpuLol;
+        let cpuLol;
     cpuStat.usagePercent(function(err, percent, seconds) {
         if (err) {
             return console.log(err);
-        }
+        } 
   const uptime = parseDur(client.uptime);
   const stats = new Discord.RichEmbed()
   .setColor("RED")
@@ -24,6 +24,7 @@ exports.run = async (client, message, args) => {
   .addField("System Status:", `Memor Usage : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB\nDiscord.js : v${version}\nNode : ${process.version}\nCPU : ${os.cpus().map(i => i.model)[0]}\nCPU Usage : ${percent.toFixed(2)}%`, true)
    .addField('About me', '**Yushi Nishimaro bot created in Indonesian , High Quality Bot, Online in 24/7, Support command : Moderation, Music etc.**')
   message.channel.send(stats)
+ });
 }
 
 function parseDur (ms){
