@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const { RichEmbed, version } = require('discord.js');
 const moment = require("moment");
 require("moment-duration-format");
-const os = require("os");Memor Usage : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB
+const os = require("os");
 const cpuStat = require("cpu-stat");
 
 exports.run = async (client, message, args) => {
