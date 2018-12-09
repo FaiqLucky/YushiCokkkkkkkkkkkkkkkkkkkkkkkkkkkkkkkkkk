@@ -24,5 +24,5 @@ exports.conf = {
 exports.help = {
   name: "gifsearch",
   description: "To find gif image",
-  usage: "gifsearch <gifname>
+  usage: "gifsearch <gifname>"
 }
