@@ -6,7 +6,11 @@ const os = require("os");
 const cpuStat = require("cpu-stat");
 
 exports.run = async (client, message, args) => {
-  
+      let cpuLol;
+    cpuStat.usagePercent(function(err, percent, seconds) {
+        if (err) {
+            return console.log(err);
+        }
   const uptime = parseDur(client.uptime);
   const stats = new Discord.RichEmbed()
   .setColor("RED")
