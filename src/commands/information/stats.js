@@ -20,8 +20,7 @@ exports.run = async (client, message, args) => {
   .addField("System Status:", `Discord.js : v${version}\nNode : ${process.version}\nBot Version : 0.0.1-Beta\nMemor Usage : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB\nCPU : ${os.cpus().map(i => i.model)[0]}\nArch : ${os.arch()}\nPlatform : ${os.platform()}`, true)
    .addField('About me', '**Yushi Nishimaro bot created in Indonesian , High Quality Bot, Online in 24/7, Support command : Moderation, Music etc.**')
   message.channel.send(stats)
- });
-};
+ };
 
 
 function parseDur (ms){
