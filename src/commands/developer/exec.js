@@ -2,13 +2,11 @@ const { exec } = require('child_process');
 
 exports.run = async(client, msg, args) => {
     if (msg.author.id !== '242969117479403520' && msg.author.id !== '242969117479403520') return msg.channel.send('Sorry, only my developers can use this')
-    exec(args.join(' '), (error, output) => {
-        if(!error.length){
-            return msg.channel.send(output, { code: 'bash'});
-        }
-        return msg.channel.send(error, { code: 'bash'});
+    exec(`${args.join(' ')}`, (error, stdout) => {
+      const response = (error || stdout);
+      message.channel.send(`Ran: ${args.join(" ")}\n${response}`, {code: "asciidoc", split: "\n"}).catch(console.error);
     });
-}
+};
 exports.conf = {
   aliases: ["ex"],
  cooldown: 0
