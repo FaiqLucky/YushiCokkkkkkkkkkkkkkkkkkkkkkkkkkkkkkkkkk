@@ -26,7 +26,7 @@ exports.run = async (client, message, args) => {
    .addField('About me', '**Yushi Nishimaro bot created in Indonesian , High Quality Bot, Online in 24/7, Support command : Moderation, Music etc.**')
   message.channel.send(stats)
  });
-}
+
 
 
 function parseDur (ms){
