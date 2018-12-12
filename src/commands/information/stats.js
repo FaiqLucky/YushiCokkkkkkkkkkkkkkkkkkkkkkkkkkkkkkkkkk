@@ -2,15 +2,15 @@ const Discord = require('discord.js');
 const { RichEmbed, version } = require('discord.js');
 const moment = require("moment");
 require("moment-duration-format");
-const os = require("os");
-const cpuStat = require("cpu-stat");
+//const os = require("os");
+//const cpuStat = require("cpu-stat");
 
 exports.run = async (client, message, args) => {
-        let cpuLol;
+      /*  let cpuLol;
     cpuStat.usagePercent(function(err, percent, seconds) {
         if (err) {
             return console.log(err);
-        }
+        }*/
   const uptime = parseDur(client.uptime);
   const stats = new Discord.RichEmbed()
   .setColor("RED")
@@ -21,7 +21,7 @@ exports.run = async (client, message, args) => {
   .addField("General Information:", `Uptime: ${uptime}\nShard: ${client.shard.count}/1\nWS Ping: ${client.ping.toFixed(2)}ms`, true)
   .addField("Create add:", `${moment.utc(client.user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
   .addField("Connected to:", `${client.guilds.size} Guilds\n${client.users.size} Users\n${client.channels.size} Channels`,true)
-  .addField("CPU Status:", `CPU : ${os.cpus().map(i => i.model)[0]}\nArch : ${os.arch()}\nPlatform : ${os.platform()}`)
+  //.addField("CPU Status:", `CPU : ${os.cpus().map(i => i.model)[0]}\nArch : ${os.arch()}\nPlatform : ${os.platform()}`)
   .addField("System Status:", `Discord.js : v${version}\nNode : ${process.version}\nBot Version : 0.0.1-Beta\nMemor Usage : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} B`, true)
    .addField('About me', '**Yushi Nishimaro bot created in Indonesian , High Quality Bot, Online in 24/7, Support command : Moderation, Music etc.**')
   message.channel.send(stats)
