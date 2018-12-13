@@ -16,8 +16,10 @@ var region = {
     "russia": "Russia",
     "hongkong": "Hong Kong"
   }
+ var cate = message.guild.channels.filter(x=>x.type ==='category').size;
 
 exports.run = async (client, message, args) => {
+    
   let si = message.guild.iconURL;
   let se = new Discord.RichEmbed()
   .setAuthor(`${message.guild.name}`, si)
@@ -25,7 +27,7 @@ exports.run = async (client, message, args) => {
   .setDescription(`**ID:** \`${message.guild.id}\`\n**Guild Owner:** ${message.guild.owner.user.tag}`)
   .addField("Guild Verification Levels:", `${verificationLevels[message.guild.verificationLevel]}`, true)
   .addField("Guild Region:", `${region[message.guild.region]}`, true)
-  .addField(`Channels [ ${message.guild.channels.size} ]\n ${message.guild.channels.filter(x=>x.type ==='category').size} Categories`, true)
+  .addField(`Channels [ ${message.guild.channels.size} ]\n ${cate} Categories`)
   
   message.channel.send(se);
 };
