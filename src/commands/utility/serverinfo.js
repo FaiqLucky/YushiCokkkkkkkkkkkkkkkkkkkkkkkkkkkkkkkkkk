@@ -1,4 +1,6 @@
 const Discord =  require('discord.js');
+const moment = require('moment');
+const momentDurationFormat = require('moment-duration-format');
 var verificationLevels = ['**None**', '**Low**', '**Medium**', '**(╯°□°）╯︵ ┻━┻** (High)', '**┻━┻彡 ヽ(ಠ益ಠ)ノ彡┻━┻** (Extreme)'];
 var region = {
     "brazi": "Brazil",
@@ -29,6 +31,7 @@ exports.run = async (client, message, args) => {
   .setDescription(`**ID:** \`${message.guild.id}\`\n**Guild Owner:** ${message.guild.owner.user.tag}`)
   .addField("Guild Verification Levels:", `${verificationLevels[message.guild.verificationLevel]}`)
   .addField("Guild Region:", `${region[message.guild.region]}`)
+  .addField(`Create At:`, `${moment(message.guild.createdAt).utcOffset('+0700').format("dddd, MMMM Do YYYY, HH:mm:ss")}`)
   .addField(`Channels [ ${message.guild.channels.size} ]`, `${cate} Categories\n ${txt} Text\n ${vc} Voice`)
   .addField(`Roles [ ${message.guild.roles.size} ]`, `To see list role use **yu!roles**`)
   
