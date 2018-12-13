@@ -4,7 +4,8 @@ exports.run = async (client, messsage, args) => {
   let si = message.guild.iconURL;
   let se = new Discord.RichEmbed()
   .setAuthor(`message.guild.name`, si)
-}
+  messsage.channel.send(se);
+};
 
 exports.conf = {
   aliases: ["si"],
