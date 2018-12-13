@@ -2,7 +2,7 @@ const Discord =  require('discord.js');
 const moment = require('moment');
 const momentDurationFormat = require('moment-duration-format');
 var verificationLevels = ['**None**', '**Low**', '**Medium**', '**(╯°□°）╯︵ ┻━┻** (High)', '**┻━┻彡 ヽ(ಠ益ಠ)ノ彡┻━┻** (Extreme)'];
-var region = {
+var region = { 
     "brazi": "Brazil",
     "eu-central": "Central Europe",
     "singapore": "Singapore",
