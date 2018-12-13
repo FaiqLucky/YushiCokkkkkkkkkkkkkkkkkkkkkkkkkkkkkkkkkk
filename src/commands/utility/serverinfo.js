@@ -27,7 +27,7 @@ exports.run = async (client, message, args) => {
   let vc = message.guild.channels.filter(x=>x.type ==='voice').size;
   let si = message.guild.iconURL;
   let se = new Discord.RichEmbed()
-  let (message.guild.emojis.size === 0) emojis = 'There are no emojis on this server.';
+  let (message.guild.emojis.size === 0) return emojis = 'There are no emojis on this server.';
   .setAuthor(`${message.guild.name}`, si)
   .setThumbnail(si)
   .setDescription(`**ID:** \`${message.guild.id}\`\n**Guild Owner:** ${message.guild.owner.user.tag}`)
