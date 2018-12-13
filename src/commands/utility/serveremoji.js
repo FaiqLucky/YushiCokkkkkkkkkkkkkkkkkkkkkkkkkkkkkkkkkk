@@ -58,7 +58,7 @@ function chunk(array, chunkSize) {
   }
   
 exports.conf = {
-  aliases: ['stji', 'sremo'],
+  aliases: ['srji', 'sremo'],
   cooldown: '3'
 }
 
