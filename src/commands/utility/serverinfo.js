@@ -1,6 +1,6 @@
 const Discord =  require('discord.js');
 
-exports.run = async (client, messsage, args) => {
+exports.run = async (client, message, args) => {
   let si = message.guild.iconURL;
   let se = new Discord.RichEmbed()
   .setAuthor(`${message.guild.name}`, si)
