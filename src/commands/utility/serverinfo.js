@@ -16,7 +16,7 @@ var region = {
     "london": "London",
     "japan": "Japan",
     "russia": "Russia",
-    "hongkong": "Hong Kong"
+    "hongkong": "Hong Kong" 
   }
  
 
