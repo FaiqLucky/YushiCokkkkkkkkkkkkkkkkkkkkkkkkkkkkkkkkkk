@@ -26,7 +26,6 @@ exports.run = async (client, message, args) => {
   let vc = message.guild.channels.filter(x=>x.type ==='voice').size;
   let si = message.guild.iconURL;
   let se = new Discord.RichEmbed()
-  let emoji = message.guild.emojis.map(e => e).join(' ');
   .setAuthor(`${message.guild.name}`, si)
   .setThumbnail(si)
   .setDescription(`**ID:** \`${message.guild.id}\`\n**Guild Owner:** ${message.guild.owner.user.tag}`)
@@ -36,7 +35,7 @@ exports.run = async (client, message, args) => {
   .addField(`Members [ ${message.guild.members.size} ]`, `${message.guild.members.filter(o => o.presence.status === 'online').size} Online\n${message.guild.members.filter(i => i.presence.status === 'idle').size} Idle\n${message.guild.members.filter(dnd => dnd.presence.status === 'dnd').size} Dnd\n${message.guild.members.filter(off => off.presence.status === 'offline').size} Offline\Invisible`)  
   .addField(`Channels [ ${message.guild.channels.size} ]`, `${cate} Categories\n ${txt} Text\n ${vc} Voice`)
   .addField(`Roles [ ${message.guild.roles.size} ]`, `To see list role use **yu!serverroles/yu!srl**`)
-  .addField(`Emojis [ ${message.guild.emojis.size} ]`, `${emoji}`)
+  .addField(`Emojis [ ${message.guild.emojis.size} ]`, `To see all emoji server use **yu!serveremoji**`)
   
   message.channel.send(se);
 };
