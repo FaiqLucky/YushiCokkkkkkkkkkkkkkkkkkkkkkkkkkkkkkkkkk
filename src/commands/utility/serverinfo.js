@@ -21,7 +21,7 @@ var region = {
 exports.run = async (client, message, args) => {
   let cate = message.guild.channels.filter(x=>x.type ==='category').size;
   let txt = message.guild.channels.filter(x=>x.type ==='text').size;
-  let vc = message.guild.channels.filter(x=>x.type ==='coice').size;
+  let vc = message.guild.channels.filter(x=>x.type ==='voice').size;
   let si = message.guild.iconURL;
   let se = new Discord.RichEmbed()
   .setAuthor(`${message.guild.name}`, si)
