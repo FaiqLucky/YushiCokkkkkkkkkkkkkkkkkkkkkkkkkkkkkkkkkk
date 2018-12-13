@@ -3,7 +3,8 @@ const Discord =  require('discord.js');
 exports.run = async (client, messsage, args) => {
   let si = message.guild.iconURL;
   let se = new Discord.RichEmbed()
-  .setAuthor(`message.guild.name`, si)
+  .setAuthor(`${message.guild.name}`, si)
+  .setThumbnail(si)
   messsage.channel.send(se);
 };
 
