@@ -20,6 +20,8 @@ var region = {
 
 exports.run = async (client, message, args) => {
   let cate = message.guild.channels.filter(x=>x.type ==='category').size;
+  let txt = message.guild.channels.filter(x=>x.type ==='text').size;
+  let vc = message.guild.channels.filter(x=>x.type ==='coice').size;
   let si = message.guild.iconURL;
   let se = new Discord.RichEmbed()
   .setAuthor(`${message.guild.name}`, si)
@@ -27,7 +29,7 @@ exports.run = async (client, message, args) => {
   .setDescription(`**ID:** \`${message.guild.id}\`\n**Guild Owner:** ${message.guild.owner.user.tag}`)
   .addField("Guild Verification Levels:", `${verificationLevels[message.guild.verificationLevel]}`, true)
   .addField("Guild Region:", `${region[message.guild.region]}`, true)
-  .addField(`Channels [ ${message.guild.channels.size} ]`, `${cate} Categories`)
+  .addField(`Channels [ ${message.guild.channels.size} ]`, `${cate} Categories\n ${txt} Text\n ${vc} Voice`)
   
   message.channel.send(se);
 };
