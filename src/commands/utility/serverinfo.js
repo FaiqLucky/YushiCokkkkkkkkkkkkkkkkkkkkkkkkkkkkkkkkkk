@@ -5,7 +5,7 @@ exports.run = async (client, messsage, args) => {
   let se = new Discord.RichEmbed()
   .setAuthor(`${message.guild.name}`, si)
   .setThumbnail(si)
-  messsage.channel.send(se);
+  message.channel.send(se);
 };
 
 exports.conf = {
