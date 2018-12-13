@@ -25,6 +25,7 @@ exports.run = async (client, message, args) => {
   .setDescription(`**ID:** \`${message.guild.id}\`\n**Guild Owner:** ${message.guild.owner.user.tag}`)
   .addField("Guild Verification Levels:", `${verificationLevels[message.guild.verificationLevel]}`, true)
   .addField("Guild Region:", `${region[message.guild.region]}`, true)
+  .addField(`Channels [ ${message.guild.channels.size} ]\n -${message.guild.channels.filter(x=>x.type ==='category').size} Categories`)
   
   message.channel.send(se);
 };
