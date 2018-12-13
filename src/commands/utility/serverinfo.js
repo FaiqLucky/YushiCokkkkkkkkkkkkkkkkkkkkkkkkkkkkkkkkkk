@@ -5,7 +5,8 @@ exports.run = async (client, message, args) => {
   let se = new Discord.RichEmbed()
   .setAuthor(`${message.guild.name}`, si)
   .setThumbnail(si)
-  .setDescription(`ID: \`${message.guild.id}\``)
+  .setDescription(`**ID:** \`${message.guild.id}\`\nGuild Owner: ${message.guild.owner.user.tag}`)
+  
   message.channel.send(se);
 };
 
