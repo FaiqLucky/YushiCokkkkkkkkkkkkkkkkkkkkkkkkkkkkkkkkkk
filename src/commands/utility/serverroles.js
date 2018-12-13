@@ -50,12 +50,12 @@ function chunk(array, chunkSize) {
   }
   
 exports.conf = {
-  aliases: ["rl"],
+  aliases: ["srl"],
   cooldown: 10
 }
 
 exports.help = {
-  name: "roles",
+  name: "serverroles",
   description: "Show guild roles",
-  usage: "roles"
+  usage: "serverroles/srl"
 }
