@@ -58,12 +58,12 @@ function chunk(array, chunkSize) {
   }
   
 exports.conf = {
-  aliases: ['el', 'emol'],
+  aliases: ['stji', 'sremo'],
   cooldown: '3'
 }
 
 exports.help = {
-  name: "emojilist",
+  name: "serveremoji",
   description: "Show emote in this guilds",
-  usage: "emojilist"
+  usage: "serveremoji/srji/sremo"
 }
