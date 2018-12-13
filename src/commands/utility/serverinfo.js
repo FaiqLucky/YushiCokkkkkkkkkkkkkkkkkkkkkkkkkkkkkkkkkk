@@ -16,10 +16,10 @@ var region = {
     "russia": "Russia",
     "hongkong": "Hong Kong"
   }
- var cate = message.guild.channels.filter(x=>x.type ==='category').size;
+ 
 
 exports.run = async (client, message, args) => {
-    
+  let cate = message.guild.channels.filter(x=>x.type ==='category').size;
   let si = message.guild.iconURL;
   let se = new Discord.RichEmbed()
   .setAuthor(`${message.guild.name}`, si)
