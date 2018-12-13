@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
   .addField("Guild Verification Levels:", `${verificationLevels[message.guild.verificationLevel]}`)
   .addField("Guild Region:", `${region[message.guild.region]}`)
   .addField(`Channels [ ${message.guild.channels.size} ]`, `${cate} Categories\n ${txt} Text\n ${vc} Voice`)
-  .addField(`Roles [ ${message.guild.roles.size} ]`, `To see list role use *yu!roles*`)
+  .addField(`Roles [ ${message.guild.roles.size} ]`, `To see list role use **yu!roles**`)
   
   message.channel.send(se);
 };
