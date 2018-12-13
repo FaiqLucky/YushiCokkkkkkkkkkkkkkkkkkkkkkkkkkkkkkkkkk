@@ -27,9 +27,10 @@ exports.run = async (client, message, args) => {
   .setAuthor(`${message.guild.name}`, si)
   .setThumbnail(si)
   .setDescription(`**ID:** \`${message.guild.id}\`\n**Guild Owner:** ${message.guild.owner.user.tag}`)
-  .addField("Guild Verification Levels:", `${verificationLevels[message.guild.verificationLevel]}`, true)
-  .addField("Guild Region:", `${region[message.guild.region]}`, true)
+  .addField("Guild Verification Levels:", `${verificationLevels[message.guild.verificationLevel]}`)
+  .addField("Guild Region:", `${region[message.guild.region]}`)
   .addField(`Channels [ ${message.guild.channels.size} ]`, `${cate} Categories\n ${txt} Text\n ${vc} Voice`)
+  .addField(`Roles [ ${message.guild.roles.size} ]`, `To see list role use *yu!roles*`)
   
   message.channel.send(se);
 };
