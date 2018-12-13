@@ -34,8 +34,8 @@ exports.run = async (client, message, args) => {
   .addField(`Create At:`, `${moment(message.guild.createdAt).utcOffset('+0700').format("dddd, MMMM Do YYYY, HH:mm:ss")}`)
   .addField(`Members [ ${message.guild.members.size} ]`, `${message.guild.members.filter(o => o.presence.status === 'online').size} Online\n${message.guild.members.filter(i => i.presence.status === 'idle').size} Idle\n${message.guild.members.filter(dnd => dnd.presence.status === 'dnd').size} Dnd\n${message.guild.members.filter(off => off.presence.status === 'offline').size} Offline\Invisible`)  
   .addField(`Channels [ ${message.guild.channels.size} ]`, `${cate} Categories\n ${txt} Text\n ${vc} Voice`)
-  .addField(`Roles [ ${message.guild.roles.size} ]`, `To see list role use **yu!serverroles/yu!srl**`)
-  .addField(`Emojis [ ${message.guild.emojis.size} ]`, `To see all emoji server use **yu!serveremoji**`)
+  .addField(`Roles [ ${message.guild.roles.size} ]`, `To see list role use **yu!serverroles/srl**`)
+  .addField(`Emojis [ ${message.guild.emojis.size} ]`, `To see all emoji server use **yu!serveremoji/srji/sremo**`)
   
   message.channel.send(se);
 };
