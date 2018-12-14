@@ -17,7 +17,7 @@ exports.run = async (client, message, args) => {
     const embed = new Discord.RichEmbed()
 		.setColor('RANDOM')
 		.setThumbnail(user.avatarURL)
-		.setTitle(`${user.username}#${user.discriminator}`)
+		.setAuthor(`${message.author.tag} ${user.avatarURL}`)
 		.addField("ID:", `${user.id}`, true)
                 .addField("AKA:", `${member.nickname !== null ? `${member.nickname}` : `NONE`}`, true)
 		.addField("Created At:", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
