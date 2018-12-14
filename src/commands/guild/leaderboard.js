@@ -22,7 +22,8 @@ this.run = async (client, message, args, color) => {
         .setColor(color)
         .setThumbnail(message.guild.iconURL)
         .setDescription(`${possibleinvites.join('\n')}`)
-        .setTimestamp(`• Message For ${message.author.tag}`, message.author.displayAvatarURL);
+        .setFooter(`• Message For ${message.author.tag}`, message.author.displayAvatarURL)
+        .setTimestamp();
     message.channel.send(embed);
     
 }
