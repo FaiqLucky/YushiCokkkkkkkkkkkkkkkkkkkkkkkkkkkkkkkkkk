@@ -24,7 +24,6 @@ exports.run = async (client, message, args) => {
 	.addField("Joined Server:", `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
 	.addField("Status:", `${user.presence.status}`)
 	.addField("Game:", `${user.presence.game ? user.presence.game.name : 'None'}`)
-        .addField("Highest Role", `${member.user.highestRole}`) 
         .addField("Roles:", member.roles.map(roles => roles).join(', '))
     message.channel.send(embed)
     }
