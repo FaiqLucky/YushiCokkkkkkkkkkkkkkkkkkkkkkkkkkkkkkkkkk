@@ -1,5 +1,5 @@
 const Discord = require('discord.js'), 
-      arraySort = require('array-sort');
+      arraySort = require('array-sort'); 
 
 this.run = async (client, message, args, color) => {
 
