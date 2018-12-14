@@ -15,17 +15,17 @@ exports.run = async (client, message, args) => {
   
 
     const embed = new Discord.RichEmbed()
-		.setColor('RANDOM')
-		.setThumbnail(user.avatarURL)
-		.setAuthor(`${message.author.tag}`)
-		.addField("ID:", `${user.id}`, true)
-                .addField("AKA:", `${member.nickname !== null ? `${member.nickname}` : `NONE`}`, true)
-		.addField("Created At:", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
-		.addField("Joined Server:", `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
-		.addField("Status:", `${user.presence.status}`, true)
-		.addField("Game:", `${user.presence.game ? user.presence.game.name : 'None'}`, true)
-                .addField("Highest Role", member.user.highestRole, true) 
-                .addField("Roles:", member.roles.map(roles => roles).join(', '), true)
+	.setColor('RANDOM')
+	.setThumbnail(user.avatarURL)
+	.setAuthor(`${message.author.tag}`)
+	.addField("ID:", `${user.id}`)
+        .addField("AKA:", `${member.nickname !== null ? `${member.nickname}` : `NONE`}`)
+	.addField("Created At:", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
+	.addField("Joined Server:", `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
+	.addField("Status:", `${user.presence.status}`)
+	.addField("Game:", `${user.presence.game ? user.presence.game.name : 'None'}`)
+        .addField("Highest Role", member.user.highestRole) 
+        .addField("Roles:", member.roles.map(roles => roles).join(', '))
     message.channel.send(embed)
     }
 
