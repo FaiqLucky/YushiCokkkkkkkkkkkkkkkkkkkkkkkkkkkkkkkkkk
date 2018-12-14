@@ -19,14 +19,12 @@ exports.run = async (client, message, args) => {
 		.setThumbnail(user.avatarURL)
 		.setTitle(`${user.username}#${user.discriminator}`)
 		.addField("ID:", `${user.id}`, true)
-    .addField("AKA:", `${member.nickname !== null ? `${member.nickname}` : `NONE`}`, true)
+                .addField("AKA:", `${member.nickname !== null ? `${member.nickname}` : `NONE`}`, true)
 		.addField("Created At:", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
 		.addField("Joined Server:", `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
-		.addField("Status:", `${status[user.presence.status]}`, true)
+		.addField("Status:", `${user.presence.status}`, true)
 		.addField("Game:", `${user.presence.game ? user.presence.game.name : 'None'}`, true)
-    .addField("Roles:", member.roles.map(roles => roles).join(', '), true)
-	
-    
+                .addField("Roles:", member.roles.map(roles => roles).join(', '), true)
     message.channel.send(embed)
     }
 
