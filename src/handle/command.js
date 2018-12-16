@@ -1,5 +1,6 @@
 const { bot_prefix, embed_color } = require('../config.json');
 const { Collection } = require('discord.js');
+const { RichEmbed } = require('discord.js');
 const cooldowns = new Collection();
 
 module.exports = async (client, message) => {
@@ -41,6 +42,18 @@ module.exports = async (client, message) => {
   } catch (e) {
       console.error(e)
   } finally {
+      let cmd = new RichEmbed()
+.setDescription(`\`\`\`
+User :: ${message.author.tag}
+User ID :: ${message.author.id}
+Using Command :: ${message.content.split(" ")[0].replace(prefix," ")}
+In Guild :: ${message.guild.name}
+Guild ID :: ${message.guild.id}
+Guild Member Count :: ${message.guild.members.size}
+Guild Owner :: ${message.guild.owner.user.tag}
+Guild Owner ID :: ${message.guild.owner.id}
+\`\`\``)
+client.channels.get("523875249280778250").send(cmd)
   console.info(`${message.author.tag}[${message.author.id}] is using ${message.content.split(" ")[0].replace(prefix, '')} command on ${message.guild.name}[${message.guild.id}]`);
   }
 }
