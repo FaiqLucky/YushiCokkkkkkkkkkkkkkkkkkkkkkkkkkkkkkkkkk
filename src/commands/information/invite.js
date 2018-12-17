@@ -10,7 +10,7 @@ message.channel.send(inv)
 }
 
 exports.conf = {
-  alises: ['inv'],
+  aliases: ['inv'],
   cooldown: 5
   }
   
