@@ -5,7 +5,7 @@ let ic = client.user.avatarURL;
 let inv = new RichEmbed()
 .setThumbnail(ic)
 .setAuthor(`${client.user.tag}Invite`, ic)
-.setDescription("Invite me to your guild", `[Invite me](http://bit.ly/YusaInvite)`)
+.addField('Invite me to your server:', `[Click here](http://bit.ly/YusaInvite)\n`)
 message.channel.send(inv)
 }
 
