@@ -12,14 +12,9 @@ exports.run = (bot, message, args) => {
         var embed = new Discord.RichEmbed()
             .setColor(`#${randomcolor}`)
             .setImage(gifUrl)
-        message.channel.send("***Please wait let me search your gift***").then(async msg => {
-                        setTimeout(() => {
-                            msg.edit(embed);
-                        }, 1000); 
+        message.channel.send(embed)
     });
-   };
-  };
-  
+   
 
 exports.conf = {
     aliases: ["gs"],
