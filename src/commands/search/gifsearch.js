@@ -14,6 +14,7 @@ exports.run = (bot, message, args) => {
             .setImage(gifUrl)
         message.channel.send(embed)
     });
+  };
    
 
 exports.conf = {
