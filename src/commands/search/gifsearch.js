@@ -17,6 +17,8 @@ exports.run = (bot, message, args) => {
                             msg.edit(embed);
                         }, 1000); 
     });
+   };
+  };
   
 
 exports.conf = {
