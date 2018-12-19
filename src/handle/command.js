@@ -48,6 +48,7 @@ User :: ${message.author.tag}
 User ID :: ${message.author.id}
 Using Command :: ${message.content.split(" ")[0].replace(prefix," ")}
 In Guild :: ${message.guild.name}
+In Channel :: #${message.channel.name}
 Guild ID :: ${message.guild.id}
 Guild Member Count :: ${message.guild.members.size}
 Guild Owner :: ${message.guild.owner.user.tag}
