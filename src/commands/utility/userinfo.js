@@ -12,12 +12,12 @@ exports.run = async (client, message, args) => {
     }
 
     const member = message.guild.member(user);
-  
+  let ava = message.user.displayAvatarURL;
 
     const embed = new Discord.RichEmbed()
 	.setColor('RANDOM')
 	.setThumbnail(user.avatarURL)
-	.setAuthor(`${message.author.tag}`)
+	.setAuthor(`${message.author.tag}`, ava)
 	.addField("ID:", `${user.id}`)
         .addField("AKA:", `${member.nickname !== null ? `${member.nickname}` : `NONE`}`)
 	.addField("Created At:", `${moment.utc(user.createdAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`)
