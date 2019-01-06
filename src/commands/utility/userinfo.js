@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
     }
 
     const member = message.guild.member(user);
-  let ava = message.user.displayAvatarURL;
+  let ava = user.avatarURL;
 
     const embed = new Discord.RichEmbed()
 	.setColor('RANDOM')
